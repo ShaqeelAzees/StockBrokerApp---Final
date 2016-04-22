@@ -1,0 +1,40 @@
+{
+    "StocksOrders": [
+        {
+            "Shares": 20,
+            "Stock": {
+                "News": "BlackBerry (NASDAQ:BBRY) is selling fewer and fewer smartphones...",
+                "StockPrice": 7.1,
+                "StockSymbol": "BBRY",
+                "StockType": 0
+            }
+        },
+        {
+            "Shares": 50,
+            "Stock": {
+                "News": "Microsoft Corp., a rare tech stalwart that has appeared...",
+                "StockPrice": 55.78,
+                "StockSymbol": "MSFT",
+                "StockType": 1
+            }
+        },
+        {
+            "Shares": 100,
+            "Stock": {
+                "News": "Apple's (NASDAQ:AAPL) second-quarter earnings release...",
+                "StockPrice": 105.97,
+                "StockSymbol": "APPL",
+                "StockType": 1
+            }
+        },
+        {
+            "Shares": 100,
+            "Stock": {
+                "News": "Facebook (NASDAQ:FB) stock is firing on all cylinders...",
+                "StockPrice": 113.44,
+                "StockSymbol": "FB",
+                "StockType": 1
+            }
+        }
+    ]
+}

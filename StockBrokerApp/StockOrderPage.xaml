@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="StockBrokerApp.StockOrderPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StockBrokerApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="ExpenseItemTemplate">
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="_txtStockItem" Text="{Binding Stock.Symbol}" Margin="0,0,10,0" Width="100" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="_txtStockPrice" Text="{Binding Stock.Price}" Grid.Column="1" Width="200" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="_txtStockType" Text="{Binding Stock.Type}" Grid.Column="2" Width="200" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="_txtStockProjectedValue" Text="{Binding Stock.ProjectedValue}" Width="200" Grid.Column="3" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+                <TextBlock x:Name="_txtShareCount" Text="{Binding Shares}" Grid.Column="4" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" 
+                    Margin="20,40,68,10">
+            <TextBlock x:Name="_txtStockOrderTitle" Text="Stock Order Details" TextWrapping="Wrap"  Style="{StaticResource HeaderTextBlockStyle}" Padding="0,3,0,5" VerticalAlignment="Top" />
+            <ListView x:Name="_lvStockList" MinHeight="400" Margin="0,10,10,10" ItemTemplate="{StaticResource ExpenseItemTemplate}"/>
+        </StackPanel>
+        <Button Content="Submit Order" FontSize="24" HorizontalAlignment="Left" Margin="28,250,0,426" Width="212" MinWidth="200"/>
+        <TextBlock Text="Investment" TextWrapping="Wrap"  Style="{StaticResource HeaderTextBlockStyle}" Padding="0,3,0,5" VerticalAlignment="Top" Margin="28,40,95,0" Height="97" />
+        <TextBlock Text="Current Value:" HorizontalAlignment="Left" Margin="28,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Style="{StaticResource CaptionTextBlockStyle}"/>
+        <TextBlock x:Name="_txtCrtInvestValue" HorizontalAlignment="Left" Margin="175,137,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" FontSize="22" Style="{StaticResource BodyTextBlockStyle}"/>
+        <TextBlock Text="Future Value:" HorizontalAlignment="Left" Margin="28,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Style="{StaticResource CaptionTextBlockStyle}"/>
+        <TextBlock x:Name="_txtFutureInvestValue" HorizontalAlignment="Left" Margin="175,185,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" FontSize="22" Style="{StaticResource BodyTextBlockStyle}"/>
+    </Grid>
+</Page>
