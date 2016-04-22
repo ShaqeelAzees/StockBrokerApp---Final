@@ -25,6 +25,12 @@ namespace StockBrokerApp
         public StockOrderPage()
         {
             this.InitializeComponent();
+
+        }
+
+        public OnSubmitOrder (object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
